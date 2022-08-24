@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/70204d8c46.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="flex justify-center md:mt-32 mt-16 md:mx-0 mx-4">
+        <div class="bg-green-700 md:p-16 px-4 py-8 rounded-xl">
+            <form id="search-form">
+                <div>
+                    <div class="container md:flex ">
+                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md" type="search" placeholder="Search a city..." id="input">
+                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md bg-yellow-500" type="submit" value="Search" id ="search">
+                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md bg-yellow-500" type="button" value="Current" id="location" onclick="currentLocation()">
+                    </div>
+        
+                    <h1 id="tmp"></h1>
+        
+                    <div class="main">
+                        <h2 id ="search-text"></h2>
+                        <h1 id="city"><i class="fa-solid fa-sun"></i></h1>
+                        <span><strong id="myTemp"></strong><small id="convert">℃</small></span>
+                        <h3 id="des"></h3>
+                        <p id="date"></p>
+                        <p id="now"></p>
+                        <p>Wind: 6.17km/h</p>
+                        <p>Humidity: 70%</p>
+                    </div>
+        
+                    <hr>
+        
+                    <div class="section">
+                        <p>Mon</p>
+                        <p>Tue</p>
+                        <p>Wed</p>
+                        <p>Thu</p>
+                        <p>Fri</p>
+                    </div>
+        
+                    <div class="section">
+                        <i class="fa-solid fa-cloud"></i>
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <i class="fa-solid fa-cloud-moon-rain"></i>
+                        <i class="fa-solid fa-cloud-sun-rain"></i>
+                        <i class="fa-solid fa-cloud-meatball"></i>
+                    </div>
+        
+                    <div class="last">
+                        <footer><p class="p">Coded by &lt;Faith Makinde&gt</p></footer>
+                    </div>
+                </div>
+                <small id="mycode"><a href="https://github.com/f8makinde/Weather-App.git">Open-source code</a>, by f8Makinde</small>
+            </form>
+        </div>
+    </div>
+
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
