@@ -10,52 +10,75 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div class="flex justify-center md:mt-32 mt-16 md:mx-0 mx-4">
+    <div class="md:mt-24 mt-16">
+        <h2 class="text-center pb-4 font-bold md:text-2xl text-lg">Weather App</h2>
+    </div>
+    
+    <div class="flex justify-center md:mx-0 mx-4">
         <div class="bg-green-700 md:p-16 px-4 py-8 rounded-xl">
             <form id="search-form">
                 <div>
-                    <div class="container md:flex ">
-                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md" type="search" placeholder="Search a city..." id="input">
-                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md bg-yellow-500" type="submit" value="Search" id ="search">
-                        <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md bg-yellow-500" type="button" value="Current" id="location" onclick="currentLocation()">
+                    <div class="container md:flex md:mb-6 mb-4">
+                        <input class="md:mr-4 mr-2 pl-2 pr-3 py-2 rounded-md w-full" type="search" placeholder="Search a city..." id="input">
+                        <input class="md:ml-4 md:mt-0 mt-4 px-4 py-2 rounded-md bg-yellow-500" type="submit" value="Search" id ="search">
+                        <!-- <input class="md:mx-8 mx-2 md:px-3 py-2 rounded-md bg-yellow-500" type="button" value="Current" id="location" onclick="currentLocation()"> -->
                     </div>
         
-                    <h1 id="tmp"></h1>
+                    <h1 id="temp"></h1>
         
                     <div class="main">
                         <h2 id ="search-text"></h2>
-                        <h1 id="city"><i class="fa-solid fa-sun"></i></h1>
-                        <span><strong id="myTemp"></strong><small id="convert">℃</small></span>
-                        <h3 id="des"></h3>
                         <p id="date"></p>
                         <p id="now"></p>
-                        <p>Wind: 6.17km/h</p>
-                        <p>Humidity: 70%</p>
+                        <h1 id="city">
+                            <i class="fa-solid fa-sun"></i>
+                        </h1>
+                        <span>
+                            <strong id="currentTemp"></strong>
+                            <small id="convert">℃</small>
+                        </span>
+                        <h3 id="destination"></h3>
+                        <!-- <p id="date"></p>
+                        <p id="now"></p> -->
+                        <p>Wind: 5.6km/h</p>
+                        <p>Humidity: 60%</p>
                     </div>
         
-                    <hr>
+                    <hr class="my-8">
         
-                    <div class="section">
-                        <p>Mon</p>
-                        <p>Tue</p>
-                        <p>Wed</p>
-                        <p>Thu</p>
-                        <p>Fri</p>
-                    </div>
-        
-                    <div class="section">
-                        <i class="fa-solid fa-cloud"></i>
-                        <i class="fa-solid fa-cloud-sun"></i>
-                        <i class="fa-solid fa-cloud-moon-rain"></i>
-                        <i class="fa-solid fa-cloud-sun-rain"></i>
-                        <i class="fa-solid fa-cloud-meatball"></i>
+                    <div class="weekly-projection">
+                        <h3 class="my-2 font-bold text-yellow-500">Weekly Weather Projection</h3>
+                        <div class="flex justify-between items-center my-2">
+                            <p>Mon</p>
+                            <p>Tue</p>
+                            <p>Wed</p>
+                            <p>Thu</p>
+                            <p>Fri</p>
+                        </div>
+
+                        <div class="flex justify-between items-center my-2">
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-cloud-moon-rain"></i>
+                            <i class="fa-solid fa-cloud-sun-rain"></i>
+                            <i class="fa-solid fa-cloud-meatball"></i>
+                        </div>
                     </div>
         
                     <div class="last">
-                        <footer><p class="p">Coded by &lt;Faith Makinde&gt</p></footer>
+                        <footer class="md:flex justify-between mt-16">
+                            <p class="text-sm">App developed by: 
+                                <small class="text-white md:text-base text-sm">Andrew Ochieng</small>
+                            </p>
+
+                            <p class="text-sm" id="source-code">
+                                Open-source code:
+                                <a class="text-white" href="https://github.com/Andrew-Ochieng/weather-app">Github-Repo</a>
+                            </p>
+                        </footer>
                     </div>
                 </div>
-                <small id="mycode"><a href="https://github.com/f8makinde/Weather-App.git">Open-source code</a>, by f8Makinde</small>
+
             </form>
         </div>
     </div>
